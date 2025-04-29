@@ -1,0 +1,395 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f7;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Dashboard Styles */
+  .dashboard {
+    text-align: center;
+    margin-top: 80px;
+  }
+  
+  .dashboard p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  /* Login Page Styles */
+  .login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eef2f7;
+    padding: 20px;
+  }
+  
+  .login-container {
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 420px; /* <-- increased width */
+    min-height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }  
+  
+  .login-title {
+    font-size: 28px;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .login-subtitle {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 32px;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .input-group {
+    width: 100%;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 14px 16px; /* smaller padding so it fits better */
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* <-- VERY IMPORTANT */
+  }  
+  
+  .login-form input:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .login-button:hover:not(:disabled) {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .login-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: #d9534f;
+    background-color: #f8d7da;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .back-link {
+    margin-top: 25px;
+    font-size: 14px;
+  }
+  
+  .back-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .back-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #676a70;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.sidebar ul li:hover {
+  text-decoration: underline;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+.medicine-form input,
+.medicine-form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.medicine-form button {
+  padding: 10px 20px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.inventory-table th,
+.inventory-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.inventory-table th {
+  background-color: #f2f2f2;
+}
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: #b9c5cb;
+    color: #fff;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .sidebar.closed {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  /* Hamburger */
+  .hamburger {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.6rem;
+    color: #0d6efd;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  /* Main content */
+  .dashboard-container {
+    display: flex;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .sidebar-closed .dashboard-content {
+    margin-left: 0;
+  }
+  
+  .sidebar-open .dashboard-content {
+    margin-left: 220px;
+  }
+  
+  .dashboard-content {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 40px;
+    transition: margin-left 0.3s ease;
+    margin-left: 220px;
+  }
+  .qty-btn {
+    padding: 4px 8px;
+    margin: 0 2px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .qty-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  .dashboard {
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .dashboard h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .dashboard h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: #444;
+  }
+  
+  .inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .inventory-table th,
+  .inventory-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .inventory-table th {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .inventory-table td input[type='number'] {
+    padding: 4px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .inventory-table td button {
+    padding: 6px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .inventory-table td button:hover {
+    background-color: #0056b3;
+  }
+  
+  .message {
+    margin-top: 1rem;
+    color: green;
+    font-weight: 500;
+  }
+  /* sidebar */
+.sidebar ul li {
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+/* Inventory page */
+.buy-input {
+  width: 60px;
+  padding: 4px;
+  text-align: center;
+}
+
+.inventory-actions {
+  margin-top: 1rem;
+}
+
+.action-button {
+  margin-right: 1rem;
+  padding: 8px 16px;
+  background: #28a745;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background: #218838;
+}
+
+/* Purchase history */
+.history-entry {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.history-entry ul {
+  margin: 0.5rem 0 0 1rem;
+}
+/* Pharmacist Inventory Section */
+.inventory-entry {
+  background: #f4f4f4;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+}
+
+.inventory-entry strong {
+  font-size: 1.1rem;
+}
+
+.inventory-entry p {
+  margin: 5px 0 0;
+  color: #555;
+}

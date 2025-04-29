@@ -1,0 +1,70 @@
+.homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .btn {
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .admin-btn {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .pharmacist-btn {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .admin-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .pharmacist-btn:hover {
+    background-color: #218838;
+  }
+  
